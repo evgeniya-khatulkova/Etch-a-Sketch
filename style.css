@@ -1,0 +1,20 @@
+body, html {
+    background-color: #3D9970;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#window{
+    padding: 0;
+    background-color: ivory;
+    height: 480px;
+    width: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+
+div {
+    border: solid 1px;
+}
