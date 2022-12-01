@@ -38,8 +38,15 @@ div {
     border: solid 1px;
 }
 
-#reset {
+#reset, #disco {
 margin-top: 24px;
 padding: 8px 18px;
 border-radius: 4px;
+}
+
+#buttons{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    border: none;
 }
