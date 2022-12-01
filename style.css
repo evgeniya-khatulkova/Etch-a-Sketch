@@ -38,14 +38,14 @@ div {
     border: solid 1px;
 }
 
-#reset, #disco {
+#reset, #disco, #black, #shaddows {
 margin-top: 24px;
 padding: 8px 18px;
 border-radius: 4px;
 }
 
 #buttons{
-    width: 50%;
+    width: 95%;
     display: flex;
     justify-content: space-around;
     border: none;

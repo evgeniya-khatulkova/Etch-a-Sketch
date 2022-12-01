@@ -4,12 +4,14 @@ const content = document.createElement('div');
 let reset = document.getElementById('reset');
 let gridSize = document.getElementById('size');
 let discoButton = document.getElementById('disco');
+let blackButton = document.getElementById('black');
 
 
 
 reset.addEventListener('click', newStart);
 gridSize.addEventListener('click', createGrid);
 discoButton.addEventListener('click',discoColor);
+blackButton.addEventListener('click', blackColor);
 
 //creates a simple grid 16x16 in a given div
 
@@ -61,7 +63,7 @@ function startGrid() {
 
 // paints in one color
 container.addEventListener('mouseover', (event) => {
-    event.target.style.background = "pink";
+    event.target.style.background = "black";
 } ); 
 
 //function for reset
@@ -73,6 +75,14 @@ function newStart(e) {
   }
  }
 }
+
+//function for drowing with black color
+function blackColor(e){
+    if (e.target.id = 'black') {
+        container.addEventListener('mouseover', (event) => {
+            event.target.style.background = "black";
+        })}}
+
 
 //function for colorful drawing 
 function discoColor(e) {
