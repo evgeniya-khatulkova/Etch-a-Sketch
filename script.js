@@ -13,11 +13,17 @@ gridSize.addEventListener('click', createGrid);
 
 startGrid();
 
-//var smallThings = document.querySelectorAll('.active');
-
 function createGrid(e) {
     if (e.target.id = 'size') {
     let choice = prompt('Enter your sketch size.');
+    if (choice <= 0 || choice > 99){
+        alert("please choose number from 1 to 99");
+        return;
+    }
+    else if (isNaN(choice) == true) {
+        alert("Only number imput is valid!");
+        return;
+    }
     var smallThings = document.querySelectorAll('.active');
     for (var i =0; i < smallThings.length; i++) {
         container.removeChild(smallThings[i]);
@@ -54,7 +60,7 @@ function startGrid() {
 
 // paints in one color
 container.addEventListener('mouseover', (event) => {
-    event.target.style.background = "blue";
+    event.target.style.background = "pink";
 } ); 
 
 //function for reset
