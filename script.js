@@ -5,6 +5,8 @@ let reset = document.getElementById('reset');
 let gridSize = document.getElementById('size');
 let discoButton = document.getElementById('disco');
 let blackButton = document.getElementById('black');
+let buttonShaddows = document.getElementById('shaddows'); 
+const greyShades = ["F8F8F8", "D8D8D8", "C0C0C0", "A8A8A8", "909090", "787878", "606060", "505050", "404040", "282828", "000000"];
 
 
 
@@ -12,6 +14,7 @@ reset.addEventListener('click', newStart);
 gridSize.addEventListener('click', createGrid);
 discoButton.addEventListener('click',discoColor);
 blackButton.addEventListener('click', blackColor);
+buttonShaddows.addEventListener('click', greyColor);
 
 //creates a simple grid 16x16 in a given div
 
@@ -87,8 +90,17 @@ function blackColor(e){
 //function for colorful drawing 
 function discoColor(e) {
     if (e.target.id = 'disco') {
-        // const randomColor = Math.floor(Math.random()*16777215).toString(16);
         container.addEventListener('mouseover', (event) => {
             const randomColor = Math.floor(Math.random()*16777215).toString(16);
             event.target.style.background = "#" + randomColor;
     })}}
+//function to work with grey which preogressivly becomes black
+function greyColor(e) {
+    if (e.target.id = 'shaddows') {
+        container.addEventListener('mouseover', (event) => {
+            event.target.style.opacity =+ (0.2);
+        })}}
+        // for(let i = 0; i < greyShades.length; i++) { 
+        // container.addEventListener('mouseover', (event) => {
+        //     event.target.style.background = "#" + greyShades[i];
+        // })}}}
