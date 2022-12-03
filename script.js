@@ -49,7 +49,7 @@ function createGrid(e) {
 }
 }
 
-
+// grid we see when page is downloaded 
 function startGrid() {
 
     var side = 28;
@@ -91,18 +91,20 @@ function blackColor(e){
 //function for colorful drawing 
 function discoColor(e) {
     if (e.target.id = 'disco') {
-        // const randomColor = Math.floor(Math.random()*16777215).toString(16);
         container.addEventListener('mouseover', (event) => {
             const randomColor = Math.floor(Math.random()*16777215).toString(16);
             event.target.style.background = "#" + randomColor;
     })}}
 
+
+//function for drowing with pink color
     function pinkColor(e){
       if (e.target.id = 'pink') {
             container.addEventListener('mouseover', (event) => {
                 event.target.style.background = "pink";
             })}}
 
+    //function to erase previous drawings
  function eraseColor(e){
      if (e.target.id = 'erase') {
      container.addEventListener('mouseover', (event) => {
